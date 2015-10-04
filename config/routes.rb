@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
   resources :shows
-  resources :shows
-  resources :shows
   get 'home/index'
   root 'home#index'
+  post 'shows/:id/book' => 'shows#book'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
